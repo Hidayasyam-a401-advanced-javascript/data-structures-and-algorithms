@@ -1,17 +1,17 @@
 'use straict'
 
-function insertShiftArray(arr,value){
+function insertShiftArray(arr, value) {
 
-    let mid=Math.ceil((arr.length)/2)
+    let mid = Math.ceil((arr.length) / 2)
     console.log(mid)
-    let output=[];
+    let output = [];
     for (let i = 0; i <= arr.length; i++) {
-      if(i < mid)
-       output[i]=arr[i]
-      else if (i > mid)
-      output[i]=arr[i-1]
-      else
-       output[i]=value
+        if (i < mid)
+            output[i] = arr[i]
+        else if (i > mid)
+            output[i] = arr[i - 1]
+        else
+            output[i] = value
 
     }
     return output;

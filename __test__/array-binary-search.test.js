@@ -21,10 +21,17 @@ function BinarySearch(arr, key) {
 }
 
 
-let arr1 = [10];
-let arr2 = [10, 20]
-let arr3 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
-console.log("array #1 ", BinarySearch(arr1, 20))
-console.log("array #2 ", BinarySearch(arr2, 20))
-console.log("array #3 ", BinarySearch(arr3, 70))
+// ===============Tests==============
+describe(' found Result ', () => {
+    test('It should return position of number ', () => {
+      expect(BinarySearch([4,8,15,16,23,42], 15)).toStrictEqual(2);
+    });
+  });
+
+
+  describe(' result not found ', () => {
+    test('It should return -1', () => {
+      expect(BinarySearch([11,22,33,44,55,66,77], 90)).toStrictEqual(-1);
+    });
+  });
