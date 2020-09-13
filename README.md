@@ -5,10 +5,10 @@
 
 | #num     |    Content     |    pull request | 
 |----------|:-----------:|:----------:|
-| day 1    |      Array Revers       |            |
-| day 2    |    Array Shift         |            |
-| day 3    |       Binary Search      |            |
-| day 4    |     Linked List        |            |
+| day 1    |      Array Revers       |  [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/1)          |
+| day 2    |    Array Shift         |    [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/3)        |
+| day 3    |       Binary Search      |  [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/4)        |
+| day 4    |     Linked List        |   [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/6)         |
 | day 5    |             |            |
 | day 6    |             |            |
 | day 7    |             |            |
