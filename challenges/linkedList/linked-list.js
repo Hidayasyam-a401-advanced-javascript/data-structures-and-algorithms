@@ -15,7 +15,7 @@ class linkedlist {
 
   insertFirst(node) {
 
-    //console.log(node)
+    console.log("call first ", node.data)
 
     this.head = node;
 
@@ -42,19 +42,59 @@ class linkedlist {
     }
   }
 
-  insertBefore(val,newval){
-    let node= new Node(newval);
-    if((this.head.data===val)|| this.head ===null)
-    {
-      let current=this.head;
+  insertBefore(val, newval) {
+    let node = new Node(newval);
+    if (this.head === null)
+      return null;
+    else if ((this.head.data === val) || this.head === null) {
+      let current = this.head;
       this.insertFirst(node);
-      this.head.next=current
+      this.head.next = current
     }
-    else{
-      let current=this.head;
+    else {
+      let tail = this.head.next;
+      let current = this.head
+      while (tail !== null) {
+        if (tail.data === val) {
+          current.next = node;
+          node.next = tail;
+          break;
+        }
+
+        else if (tail.next === null)
+          return "value dose not exist we can't Insert new Value"
+        current = current.next;
+        tail = tail.next
+      }
 
     }
 
+  }
+
+  insertafter(val, newval) {
+    let node = new Node(newval);
+    if (this.head === null)
+      return null;
+
+    else {
+      let tail = this.head.next;
+      let current = this.head
+      while (current !== null) {
+        if (current.data === val) {
+          current.next = node;
+          node.next = tail;
+          break;
+        }
+
+
+        else if (tail === null && current.next == null)
+          return "value dose not exist we can't Insert new Value"
+        current = current.next;
+        tail = tail.next
+
+
+      }
+    }
   }
   includes(val) {
 
@@ -70,12 +110,12 @@ class linkedlist {
     return false
 
   }
+
+
   toString() {
     let current = this.head;
     let content = "";
-
     while (current !== null) {
-      //console.log(current.data, "->");
       content = content + `{ ${current.data} } -> `
       current = current.next;
     }
