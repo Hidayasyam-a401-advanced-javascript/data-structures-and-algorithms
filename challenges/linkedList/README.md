@@ -14,4 +14,5 @@ Big O = n because I used Just for loop
 <!-- Embedded whiteboard image -->
 ![image](../../assets/linkedlist2.jpeg)
 
+
 ![image](../../assets/linkedlist.jpg)
