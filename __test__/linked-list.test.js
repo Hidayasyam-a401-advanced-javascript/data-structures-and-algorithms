@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-let data = require('../challenges/linkedList/linked-list.js')
-let l1 = new data;
+let data = require('../challenges/linkedList/linked-list.js');
+
 
 describe('list Instensc  ', () => {
   test('Can successfully instantiate an empty linked list ', () => {
@@ -40,7 +40,7 @@ describe('list Insert   ', () => {
     l2.append(4);
     l2.append(5);
 
-    expect(typeof (l2.head.next)).toEqual("object");
+    expect(typeof (l2.head.next)).toEqual('object');
 
   });
 });
@@ -77,7 +77,7 @@ describe('return a collection ', () => {
     l2.append(2);
     l2.append(5);
     //l2.append(11);
-    expect(l2.toString()).toStrictEqual("{ 1 } -> { 2 } -> { 5 } -> NULL");
+    expect(l2.toString()).toStrictEqual('{ 1 } -> { 2 } -> { 5 } -> NULL');
   });
 });
 
@@ -91,7 +91,7 @@ describe('list append   ', () => {
     l2.append(14);
     l2.append(11);
 
-    expect(l2.toString()).toStrictEqual("{ 51 } -> { 33 } -> { 14 } -> { 11 } -> NULL");
+    expect(l2.toString()).toStrictEqual('{ 51 } -> { 33 } -> { 14 } -> { 11 } -> NULL');
 
   });
 });
@@ -111,7 +111,7 @@ describe('list Insert after  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    expect(l2.insertafter(10, 55)).toEqual("value dose not exist we can't Insert new Value");
+    expect(l2.insertafter(10, 55)).toEqual('value dose not exist we can\'t Insert new Value');
 
   });
 });
@@ -122,8 +122,8 @@ describe('list Insert after  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    l2.insertafter(33, 10)
-    expect(l2.toString()).toStrictEqual("{ 51 } -> { 33 } -> { 10 } -> { 14 } -> { 11 } -> NULL");
+    l2.insertafter(33, 10);
+    expect(l2.toString()).toStrictEqual('{ 51 } -> { 33 } -> { 10 } -> { 14 } -> { 11 } -> NULL');
 
   });
 });
@@ -143,7 +143,7 @@ describe('list Insert before  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    expect(l2.insertafter(10, 55)).toEqual("value dose not exist we can't Insert new Value");
+    expect(l2.insertafter(10, 55)).toEqual('value dose not exist we can\'t Insert new Value');
 
   });
 });
@@ -156,8 +156,8 @@ describe('list Insert Before  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    l2.insertBefore(33, 10)
-    expect(l2.toString()).toStrictEqual("{ 51 } -> { 10 } -> { 33 } -> { 14 } -> { 11 } -> NULL");
+    l2.insertBefore(33, 10);
+    expect(l2.toString()).toStrictEqual('{ 51 } -> { 10 } -> { 33 } -> { 14 } -> { 11 } -> NULL');
 
   });
 
@@ -165,7 +165,7 @@ describe('list Insert Before  ', () => {
     test('if is empty ', () => {
       let l2 = new data;
 
-      expect(l2.kthFromEnd(2)).toStrictEqual("Excption");
+      expect(l2.kthFromEnd(2)).toStrictEqual('Excption');
 
     });
 
@@ -179,6 +179,62 @@ describe('list Insert Before  ', () => {
       l2.append(14);
       l2.append(11);
       expect(l2.kthFromEnd(33)).toEqual(2);
+
+    });
+
+  });
+
+
+
+  describe('Zip List ', () => {
+    test('if lists have same length ', () => {
+      let l1 = new data;
+      let l2 = new data;
+      l2.append(1);
+      l2.append(2);
+      l2.append(5);
+      let l3 = new data;
+      l3.append(10);
+      l3.append(33);
+      l3.append(14);
+      l1.zipLists(l2,l3);
+      expect(l1.toString()).toStrictEqual('{ 1 } -> { 10 } -> { 2 } -> { 33 } -> { 5 } -> { 14 } -> NULL');
+
+    });
+
+  });
+
+  describe('Zip List ', () => {
+    test('if second list  have less length ', () => {
+      let l1 = new data;
+      let l2 = new data;
+      l2.append(1);
+      l2.append(2);
+      l2.append(5);
+      let l3 = new data;
+      l3.append(10);
+      l3.append(33);
+     
+      l1.zipLists(l2,l3);
+      expect(l1.toString()).toStrictEqual('{ 1 } -> { 10 } -> { 2 } -> { 33 } -> { 5 } -> NULL');
+
+    });
+
+  });
+
+  describe('Zip List ', () => {
+    test('if first  list  have less length ', () => {
+      let l1 = new data;
+      let l2 = new data;
+      l2.append(1);
+      l2.append(2);
+     
+      let l3 = new data;
+      l3.append(10);
+      l3.append(33);
+      l2.append(5);
+      l1.zipLists(l2,l3);
+      expect(l1.toString()).toStrictEqual('{ 1 } -> { 10 } -> { 2 } -> { 33 } -> { 5 } -> NULL');
 
     });
 
