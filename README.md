@@ -10,8 +10,8 @@
 | day 3    |       Binary Search      |  [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/4)        |
 | day 4    |     Linked List        |   [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/6)         |
 | day 5    |           ll Insertion  |  [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/10)          |
-| day 6    |             |            |
-| day 7    |             |            |
+| day 6    |       ll-kthfrom      | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/12)           |
+| day 7    |        ll-zip     |  [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/13)          |
 | day 8    |             |            |
 | day 9    |             |            |
 | day 10   |             |            |
