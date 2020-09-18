@@ -40,7 +40,7 @@ describe('list Insert   ', () => {
     l2.append(4);
     l2.append(5);
 
-    expect(typeof(l2.head.next)).toEqual("object");
+    expect(typeof (l2.head.next)).toEqual("object");
 
   });
 });
@@ -90,7 +90,7 @@ describe('list append   ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    
+
     expect(l2.toString()).toStrictEqual("{ 51 } -> { 33 } -> { 14 } -> { 11 } -> NULL");
 
   });
@@ -111,7 +111,7 @@ describe('list Insert after  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    expect(l2.insertafter(10,55)).toEqual("value dose not exist we can't Insert new Value");
+    expect(l2.insertafter(10, 55)).toEqual("value dose not exist we can't Insert new Value");
 
   });
 });
@@ -122,7 +122,7 @@ describe('list Insert after  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    l2.insertafter(33,10)
+    l2.insertafter(33, 10)
     expect(l2.toString()).toStrictEqual("{ 51 } -> { 33 } -> { 10 } -> { 14 } -> { 11 } -> NULL");
 
   });
@@ -143,7 +143,7 @@ describe('list Insert before  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    expect(l2.insertafter(10,55)).toEqual("value dose not exist we can't Insert new Value");
+    expect(l2.insertafter(10, 55)).toEqual("value dose not exist we can't Insert new Value");
 
   });
 });
@@ -156,8 +156,31 @@ describe('list Insert Before  ', () => {
     l2.append(33);
     l2.append(14);
     l2.append(11);
-    l2.insertBefore(33,10)
+    l2.insertBefore(33, 10)
     expect(l2.toString()).toStrictEqual("{ 51 } -> { 10 } -> { 33 } -> { 14 } -> { 11 } -> NULL");
+
+  });
+
+  describe('KhFromEnd ', () => {
+    test('if is empty ', () => {
+      let l2 = new data;
+
+      expect(l2.kthFromEnd(2)).toStrictEqual("Excption");
+
+    });
+
+  });
+
+  describe('KhFromEnd ', () => {
+    test('if not empty ', () => {
+      let l2 = new data;
+      l2.append(51);
+      l2.append(33);
+      l2.append(14);
+      l2.append(11);
+      expect(l2.kthFromEnd(33)).toEqual(2);
+
+    });
 
   });
 });
