@@ -110,7 +110,35 @@ class linkedlist {
     return false
 
   }
+  kthFromEnd(k) {
+    if (!this.head) {
+      return ('Excption');
 
+    }
+    else if (!this.includes(k)) {
+      return ('Excption');
+
+    }
+    else {
+      let length = 0;
+      let counter = 0;
+      let current = this.head;
+
+      let currentSeconedLoop = this.head;
+      while (current.next !== null) {
+        length++;
+
+        current = current.next;
+      }
+
+     
+      while (currentSeconedLoop.data !== k && currentSeconedLoop !== null) {
+        counter++;
+        currentSeconedLoop = currentSeconedLoop.next;
+      } 
+      return length - counter;
+    }
+  }
 
   toString() {
     let current = this.head;
