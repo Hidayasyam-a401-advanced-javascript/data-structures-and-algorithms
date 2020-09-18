@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 class Node {
   constructor(val) {
@@ -15,7 +15,7 @@ class linkedlist {
 
   insertFirst(node) {
 
-    console.log("call first ", node.data)
+    console.log('call first ', node.data);
 
     this.head = node;
 
@@ -26,9 +26,9 @@ class linkedlist {
 
   append(value) {
 
-    let node = new Node(value)
+    let node = new Node(value);
     if (this.head === null)
-      this.insertFirst(node)
+      this.insertFirst(node);
 
 
     else {
@@ -49,11 +49,11 @@ class linkedlist {
     else if ((this.head.data === val) || this.head === null) {
       let current = this.head;
       this.insertFirst(node);
-      this.head.next = current
+      this.head.next = current;
     }
     else {
       let tail = this.head.next;
-      let current = this.head
+      let current = this.head;
       while (tail !== null) {
         if (tail.data === val) {
           current.next = node;
@@ -62,9 +62,9 @@ class linkedlist {
         }
 
         else if (tail.next === null)
-          return "value dose not exist we can't Insert new Value"
+          return 'value dose not exist we can\'t Insert new Value';
         current = current.next;
-        tail = tail.next
+        tail = tail.next;
       }
 
     }
@@ -78,7 +78,7 @@ class linkedlist {
 
     else {
       let tail = this.head.next;
-      let current = this.head
+      let current = this.head;
       while (current !== null) {
         if (current.data === val) {
           current.next = node;
@@ -88,9 +88,9 @@ class linkedlist {
 
 
         else if (tail === null && current.next == null)
-          return "value dose not exist we can't Insert new Value"
+          return 'value dose not exist we can\'t Insert new Value';
         current = current.next;
-        tail = tail.next
+        tail = tail.next;
 
 
       }
@@ -105,9 +105,9 @@ class linkedlist {
       if (current.data === val)
         return true;
 
-      current = current.next
+      current = current.next;
     }
-    return false
+    return false;
 
   }
   kthFromEnd(k) {
@@ -142,12 +142,41 @@ class linkedlist {
 
   toString() {
     let current = this.head;
-    let content = "";
+    let content = '';
     while (current !== null) {
-      content = content + `{ ${current.data} } -> `
+      content = content + `{ ${current.data} } -> `;
       current = current.next;
     }
-    return content + 'NULL'
+    return content + 'NULL';
+  }
+
+  zipLists(list1, list2){
+
+    //let l1=new linkedlist();
+    let currentListone=list1.head;
+    console.log(currentListone);
+    let currentListTwo=list2.head;
+    console.log(currentListTwo);
+    console.log('hi');
+    while(currentListone !== null || currentListTwo !== null)
+    {    // console.log('hi')
+      if(currentListone!== null)
+      {
+        //console.log('list1 : ',currentListone.data)
+        this.append(currentListone.data);
+        currentListone=currentListone.next;
+      }
+
+      if(currentListTwo!== null)
+      {
+        //console.log('list2 : ',currentListTwo.data)
+        this.append(currentListTwo.data);
+        currentListTwo=currentListTwo.next;
+      }
+
+      //console.log(this.toString())
+    }
+    return this;
   }
 
 }
