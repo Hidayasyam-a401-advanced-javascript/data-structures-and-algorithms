@@ -12,7 +12,7 @@
 | day 5    |           ll Insertion  |  [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/10)          |
 | day 6    |       ll-kthfrom      | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/12)           |
 | day 7    |        ll-zip     |  [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/13)          |
-| day 8    |      Stack and queue       |            |[PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/14)
+| day 8    |      Stack and queue       |   [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/14)         |
 | day 9    |             |            |
 | day 10   |             |            |
 | day 11   |             |            |
