@@ -48,7 +48,7 @@ describe('Tree  ', () => {
     t.add(10);
     t.add(19);
     t.add(9);
-    t.add(1);
+    t.add(1); 
     expect(t.postOrder()).toStrictEqual([1, 9, 19, 10]);
 
   });
