@@ -1,32 +1,32 @@
-'use strict'
+'use strict';
 
 class Node {
-    constructor(data){
-        this.data=data;
-        this.next=null;
-    }
+  constructor(data){
+    this.data=data;
+    this.next=null;
+  }
 }
 
 class Stack {
 
-    constructor(){
-        this.top=null;
-        this.length=0;
-    }
+  constructor(){
+    this.top=null;
+    this.length=0;
+  }
 
 
-    push(data){
+  push(data){
 
-        let node=new Node(data);
-        node.next=this.top;
-        this.top=node;
-        this.length++;
-    }
+    let node=new Node(data);
+    node.next=this.top;
+    this.top=node;
+    this.length++;
+  }
 
-    pop(){
-        if(this.isEmpty())
-        return "Stack isEmpty ..!!";
-      else{
+  pop(){
+    if(this.isEmpty())
+      return 'Stack isEmpty ..!!';
+    else{
       let temp =this.top;
       this.top=temp.next;
       this.length--;
@@ -34,16 +34,16 @@ class Stack {
     }
      
 
-    }
-    peek(){
+  }
+  peek(){
 
-      return this.isEmpty()? 'Stack isEmpty .. !' : this.top.data;
+    return this.isEmpty()? 'Stack isEmpty .. !' : this.top.data;
 
-    }
-    isEmpty(){
+  }
+  isEmpty(){
 
-      return this.top ? false : true ;
-    }
+    return this.top ? false : true ;
+  }
 
 }
 
@@ -56,7 +56,7 @@ class Queue {
 
   enqueue(data){
 
-     let node=new Node(data);
+    let node=new Node(data);
     if(this.isEmpty())
       this.rear=this.front=node;
     else{
@@ -68,7 +68,7 @@ class Queue {
   }
   dequeue (){
     if(this.isEmpty())
-      return "Queue isEmpty ..!!";
+      return 'Queue isEmpty ..!!';
     else if(this.length===1)
     {
       this.front=null;
@@ -84,14 +84,14 @@ class Queue {
 
   peek(){
 
-      return this.isEmpty()? 'Queue isEmpty .. !' : this.front.data;
+    return this.isEmpty()? 'Queue isEmpty .. !' : this.front.data;
 
-    }
+  }
 
   isEmpty(){
 
-      return this.front ? false : true ;
-    }
+    return this.front ? false : true ;
+  }
 
 }
 module.exports = { stack: Stack, queue: Queue };
