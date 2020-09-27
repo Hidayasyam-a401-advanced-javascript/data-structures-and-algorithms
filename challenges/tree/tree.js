@@ -58,37 +58,29 @@ class BinaryTree {
 
   add(val) {
 
-    let new_node = new Node(val);
-    if (this.root === null)
-      this.root = new_node;
-    else {
+    let newNode = new Node(val);
+    if (this.root === null) {
+        this.root = newNode;
+        return this.root;
+    };
 
-      let _addnode = (node) => {
+    let _addnode = (node) => {
+        if (node.value > val) {
+            if (node.left) {
+                _addnode(node.left);
 
-        if (new_node.data < node.data) {
+            } else { node.left = newNode; }
 
-          if (node.left === null)
-            node.left = new_node;
-          else
+        } else {
+            if (node.right) {
+                _addnode(node.right);
 
+            } else { node.right = newNode; };
+        };
+    };
 
-            _addnode(node.left, new_node);
-        }
-
-
-        else {
-
-          if (node.right === null)
-            node.right = new_node;
-          else
-
-            _addnode(node.right, new_node);
-        }
-
-      };
-      _addnode(this.root);
-    }
-
+    _addnode(this.root);
+    return this.root;
 
   }
 

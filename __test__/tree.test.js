@@ -22,7 +22,7 @@ describe('Tree  ', () => {
     t.add(10);
     t.add(19);
     t.add(9);
-    expect(t.inOrder()).toStrictEqual([10, 19, 9]);
+    expect(t.inOrder()).toStrictEqual([9, 10, 19]);
 
   });
   test(' successfully return a collection from an inorder traversal', () => {
@@ -31,7 +31,7 @@ describe('Tree  ', () => {
     t.add(19);
     t.add(9);
     t.add(1);
-    expect(t.inOrder()).toStrictEqual([10, 19, 9, 1]);
+    expect(t.inOrder()).toStrictEqual([1, 9, 10, 19]);
 
   });
   test(' successfully return a collection from an preorder  traversal', () => {
@@ -40,7 +40,7 @@ describe('Tree  ', () => {
     t.add(19);
     t.add(9);
     t.add(1);
-    expect(t.preOrder()).toStrictEqual([10, 19, 9, 1]);
+    expect(t.preOrder()).toStrictEqual([10, 9, 1, 19]);
 
   });
   test(' successfully return a collection from an postorder  traversal', () => {
