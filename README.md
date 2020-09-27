@@ -17,6 +17,6 @@
 | day 10   |             |            |
 | day 11   |             |            |
 | day 12   |            tree | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/15)           |
-| day 13   |             |            |
+| day 13   |      Max Tree  | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/17)           |
 | day 14   |             |            |
 | day 15   |             |            |
