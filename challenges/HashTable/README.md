@@ -12,7 +12,7 @@
 - ### Get Hash O(1)
 - ### GET O(n)
 - ### Contains O(n)
-- ### Add O(1)
+- ### Add  O(n)
 
 ## API
 
