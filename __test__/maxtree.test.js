@@ -1,21 +1,14 @@
 'use strict';
 
-let maxtree = require('../challenges/BinaryTreeMax/maxtree');
+let hashtable = require('../challenges/repeatedword/repeatedword');
 
 
-test(' successfully return max value', () => {
-    let t = new maxtree;
+test(' successfully return value', () => {
+    let t = new hashtable;
     t.add(10);
     t.add(19);
     t.add(9);
     t.add(1);
     expect(t.findmaximumvalue()).toEqual(19);
-
-  });
-
-  test(' successfully return empty  if tree is empty', () => {
-    let t = new maxtree;
-   
-    expect(t.findmaximumvalue()).toStrictEqual("is Empty .. !");
 
   });
