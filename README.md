@@ -20,3 +20,4 @@
 | day 13   |      Max Tree  | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/17)           |
 | day 14   |    insertion sort         | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/18)           |
 | day 15   |   HashTable          |[PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/21)            |
+| day 16  |   repeatedWord          |[PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/22)            |
