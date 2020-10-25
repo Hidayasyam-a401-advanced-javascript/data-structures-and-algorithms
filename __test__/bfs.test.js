@@ -1,6 +1,6 @@
-const Vertex = require('../challenges/graph/graph').Vertex;
-const Graph = require('../challenges/graph/graph').Graph;
-//const Edge = require('../challenges/graph/graph').Edge;
+const Vertex = require('../challenges/bfs/bfs').Vertex;
+const Graph = require('../challenges/bfs/bfs').Graph;
+//const Edge = require('../challenges/bfs/bfs').Edge;
 
 
 let graph = new Graph();
@@ -32,10 +32,10 @@ describe('Graph data structure', () => {
     graph.addDirectedEdge(ten, two);
     graph.addDirectedEdge(ten, eight);
     graph.addDirectedEdge(eight, seven);
-    expect(graph._adjacencyList).toBeTruthy();
-    expect(graph.GetNeighbours(six)).toBeTruthy();
-    expect(graph.GetNodes()).toBeTruthy();
-    expect(graph.Size()).toStrictEqual(6);
+    //expect(graph._adjacencyList).toBeTruthy();
+    // expect(graph.GetNeighbours(six)).toBeTruthy();
+    expect(graph.bfs(six)).toBeTruthy();
+    //expect(graph.Size()).toStrictEqual(6);
   });
  
 });

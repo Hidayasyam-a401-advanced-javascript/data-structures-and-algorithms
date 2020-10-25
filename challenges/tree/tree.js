@@ -60,23 +60,23 @@ class BinaryTree {
 
     let newNode = new Node(val);
     if (this.root === null) {
-        this.root = newNode;
-        return this.root;
-    };
+      this.root = newNode;
+      return this.root;
+    }
 
     let _addnode = (node) => {
-        if (node.value > val) {
-            if (node.left) {
-                _addnode(node.left);
+      if (node.value > val) {
+        if (node.left) {
+          _addnode(node.left);
 
-            } else { node.left = newNode; }
+        } else { node.left = newNode; }
 
-        } else {
-            if (node.right) {
-                _addnode(node.right);
+      } else {
+        if (node.right) {
+          _addnode(node.right);
 
-            } else { node.right = newNode; };
-        };
+        } else { node.right = newNode; }
+      }
     };
 
     _addnode(this.root);
