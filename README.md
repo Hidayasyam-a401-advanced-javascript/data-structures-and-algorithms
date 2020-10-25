@@ -23,3 +23,4 @@
 | day 16  |   repeatedWord          |[PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/22)            |
 | day 17 | Join Left | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/23)|
 | day 18 | graph | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/24)|
+| BFS | [PR](https://github.com/Hidayasyam-a401-advanced-javascript/data-structures-and-algorithms/pull/25)|
