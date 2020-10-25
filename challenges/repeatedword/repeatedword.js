@@ -2,7 +2,7 @@
 const HashTable = require('../HashTable/hashtable');
 
 function repeated_word(str){
-    let ht = new HashTable(20);
+  let ht = new HashTable(20);
   //console.log(str.split(' '));
   let arr = str.split(' ');
   var maxWord;

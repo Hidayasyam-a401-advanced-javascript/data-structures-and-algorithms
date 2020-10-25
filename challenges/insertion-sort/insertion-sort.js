@@ -8,7 +8,7 @@ function InsertionSort(arr)
       arr[j+1]=arr[j];
       j=j-1;
     }
-    arr[j+1]=temp
+    arr[j+1]=temp;
   }
   return arr;
 }
