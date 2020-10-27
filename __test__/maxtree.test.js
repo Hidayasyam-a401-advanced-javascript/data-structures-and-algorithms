@@ -1,10 +1,10 @@
 'use strict';
 
-let hashtable = require('../challenges/repeatedword/repeatedword');
+let tree = require('../challenges/BinaryTreeMax/maxtree');
 
 
 test(' successfully return value', () => {
-  let t = new hashtable;
+  let t = new tree;
   t.add(10);
   t.add(19);
   t.add(9);
