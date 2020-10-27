@@ -1,43 +1,43 @@
+'use strict';
+
+const getEdges = require('../challenges/GetEdges/GetEdges').getEdges;
 const Vertex = require('../challenges/GetEdges/GetEdges').Vertex;
 const Graph = require('../challenges/GetEdges/GetEdges').Graph;
-//const Edge = require('../challenges/bfs/bfs').Edge;
+it('should determine connection', () => {
+  const graph = new Graph();
+
+  const Metroville = new Vertex('Metroville');
+  const Pandora = new Vertex('Pandora');
+
+  graph.addVertex(Metroville);
+  graph.addVertex(Pandora);
+
+  graph.addDirectedEdge(Metroville, Pandora, 82);
+
+  const result = getEdges(graph, [Metroville, Pandora]);
+
+  expect(result.isPossible);
+  expect(result.cost).toBe(82);
+})
+
+it('should determine connection', () => {
+  const graph = new Graph();
+
+  const Arendelle = new Vertex('Arenedelle');
+  const Monstropolis = new Vertex('Monstropolis');
+  const Naboo = new Vertex('Naboo');
 
 
-let graph = new Graph();
 
+  graph.addVertex(Arendelle);
+  graph.addVertex(Monstropolis);
+  graph.addVertex(Naboo);
 
-const six = new Vertex(6);
-const seven = new Vertex(7);
-const eight = new Vertex(8);
-const ten = new Vertex(10);
-const two = new Vertex(2);
-const three = new Vertex(3);
+  graph.addDirectedEdge(Arendelle, Monstropolis, 42);
+  graph.addDirectedEdge(Monstropolis, Naboo, 73);
 
-describe('Graph data structure', () => {
-  test('Node can be successfully added to the graph ', () => {
-    graph.addVertex(six);
-    expect(graph._adjacencyList).toBeTruthy();
-  });
-  test('Node can be successfully added to the graph ', () => {
-    graph.addVertex(two);
-    graph.addVertex(three);
-    graph.addVertex(six);
-    graph.addVertex(seven);
-    graph.addVertex(eight);
-    graph.addVertex(ten);
-    graph.addDirectedEdge(two, seven);
-    graph.addDirectedEdge(three, eight);
-    graph.addDirectedEdge(six, seven);
-    graph.addDirectedEdge(six, eight);
-    graph.addDirectedEdge(ten, two);
-    graph.addDirectedEdge(ten, eight);
-    graph.addDirectedEdge(eight, seven);
-    //expect(graph._adjacencyList).toBeTruthy();
-    // expect(graph.GetNeighbours(six)).toBeTruthy();
-    expect(graph.bfs(six)).toBeTruthy();
-    //expect(graph.Size()).toStrictEqual(6);
-  });
- 
-});
+  const result = getEdges(graph, [Arendelle, Monstropolis, Naboo]);
 
-  
+  expect(result.isPossible).toBe(true);
+  expect(result.cost).toBe(115);
+})

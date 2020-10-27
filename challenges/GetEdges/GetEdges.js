@@ -43,20 +43,19 @@ class Graph {
 
   }
 
-  GetNodes()
-  {
+  GetNodes() {
     let nodeList = [];
     // console.log(this._adjacencyList.entries().vertex)
     for (const [vertex] of this._adjacencyList.entries()) {
       // console.log(vertex)
       nodeList.push(vertex);
-    }   
+    }
     return nodeList;
 
   }
 
   GetNeighbours(vertex) {
-    if (!this._adjacencyList.has(vertex) ) {
+    if (!this._adjacencyList.has(vertex)) {
       console.log('vertex does not exist');
     } else {
       return this._adjacencyList.get(vertex);
@@ -69,14 +68,13 @@ class Graph {
       console.log('E ====> ', edge);
     }
   }
-    
-  Size()
-  {
+
+  Size() {
     let nodesNumber = 0;
     for (const [vertex] of this._adjacencyList.values()) {
       nodesNumber++;
-    }   
-      
+    }
+
     return nodesNumber;
   }
 
@@ -103,10 +101,40 @@ class Graph {
     return complete;
   }
 
-}
 
+}
+function getEdges(graph, airports) {
+
+  let isPossible = true;
+  let cost = 0;
+
+  for (let i = 0; i < airports.length - 1; i++) {
+    const airport = airports[i];
+    const destination = airports[i + 1];
+
+    const directConnections = graph.GetNeighbours(airport);
+    let directFlight = false;
+    for (let connection of directConnections) {
+      if (connection.vertex === destination) {
+        directFlight = true;
+        cost += connection.weight;
+        break;
+      }
+    }
+    if (!directFlight) {
+      isPossible = false;
+      cost = 0;
+      break;
+    }
+  }
+  return {
+    isPossible,
+    cost,
+  };
+}
 module.exports = {
   Vertex,
   Graph,
   Edge,
+  getEdges,
 };
